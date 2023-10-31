@@ -106,7 +106,7 @@
   text-decoration: underline;
   opacity: 0.6;
   transition-timing-function: linear;
-} 
+}
 
 .cards {
   display: flex;
@@ -215,53 +215,53 @@
   transition-timing-function: var(--transition-function);
   cursor: pointer;
   inline-size: 43px;
+}
 
-  .like-icon {
-    position: absolute;
+.like-icon {
+  position: absolute;
+
+  .core {
+    fill: var(--core-color-transparent);
+    transition: fill 0.3s 0.03s linear;
   }
 
-    .core {
-      fill: var(--core-color-transparent);
-      transition: fill 0.3s 0.03s linear;
-    }
-
-    .main-body {
-      fill: var(--main-body-color-transparent);
-      transition: fill 0.3s linear;
-    }
-
-    .contour {
-      fill: var(--contour-color);
-    }
-
-    .sparks {
-      fill: var(--sparks-fill-color-transparent);
-    }
+  .main-body {
+    fill: var(--main-body-color-transparent);
+    transition: fill 0.3s linear;
   }
 
-  .like-icon.is-liked {
-    animation: icon-scaling 0.3s 0.1s ease-in reverse;
+  .contour {
+    fill: var(--contour-clr);
+  }
 
-    .core {
-      animation: core-coloring 0.3s linear;
-      animation-fill-mode: forwards;
-    }
+  .sparks {
+    fill: var(--sparks-fill-color-transparent);
+  }
+}
 
-    .main-body {
-      animation: main-body-coloring 0.3s 0.05s linear;
-      animation-fill-mode: forwards;
-    }
+.like-icon.is-liked {
+  animation: icon-scaling 0.3s 0.1s ease-in reverse;
 
-    .contour {
-      animation: contour-coloring 0.3s 0.06s linear;
-      animation-fill-mode: forwards;
-    }
+  .core {
+    animation: core-coloring 0.3s linear;
+    animation-fill-mode: forwards;
+  }
 
-    .sparks {
-      animation: sparks-coloring 0.3s 0.3s ease-in reverse;
-    }
-  } 
+  .main-body {
+    animation: main-body-coloring 0.3s 0.05s linear;
+    animation-fill-mode: forwards;
+  }
 
+  .contour {
+    animation: contour-coloring 0.3s 0.06s linear;
+    animation-fill-mode: forwards;
+  }
+
+  .sparks {
+    animation: sparks-coloring 0.3s 0.3s ease-in reverse;
+  }
+}
+  
 .card__icon-button:focus {
   outline: none;
 }
@@ -429,7 +429,7 @@
   background-color: rgb(0 0 0 / 75%);
 }
 
-@media (width > 380px) {
+@media (width <= 375px) {
   .footer {
     max-inline-size: 340px;
   }

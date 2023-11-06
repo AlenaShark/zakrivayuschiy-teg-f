@@ -31,7 +31,7 @@
   --gradient-smeared-1: #e7e7e7;
   --gradient-smeared-2: #1a1a1a;
 
-  /*gradient light */
+  /*gradient light*/ 
   --gradient-left-to-right: repeating-linear-gradient(to right,
     var(--gradient-line-2) 0,
     var(--gradient-line-1) 1px,

@@ -27,20 +27,14 @@
   align-items: center;
   margin: 0 auto 100px;
   border: 2px solid var(--accent-color);
-  font-family: var(--accent-font);
-  font-weight: 400;
+  font-family: var(--accent-font), sans-serif;
+  font-weight: var(--main-font-weight);
   font-size: 14px;
+  padding-bottom: 15px;
   text-transform: uppercase;
   background-color: var(--background-color);
   transition: background-color var(--transform-time);
   transition-timing-function: var(--transition-function);
-}
-
-.header__title {
-  margin: clamp(7.5rem, 6.3318rem + 4.9844vw, 8.5rem) 0 25px;
-  font-weight: inherit;
-  font-size: clamp(0.875rem, 0.2179rem + 2.8037vw, 1.4375rem);
-  text-align: center;
 }
 
 .header__title-accent {
@@ -48,6 +42,15 @@
   margin: 0 0 20px;
   font-weight: inherit;
   font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
+  text-decoration: none;
+}
+
+
+.header__title {
+  margin: clamp(7.5rem, 6.3318rem + 4.9844vw, 8.5rem) 0 25px;
+  font-weight: inherit;
+  font-size: clamp(0.875rem, 0.2179rem + 2.8037vw, 1.4375rem);
+  text-align: center;
 }
 
 .theme-menu__list {
@@ -58,25 +61,23 @@
   list-style: none;
 }
 
-
 .theme-menu__item .theme-menu__button {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), sans-serif;
   border: none;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--main-font-weight);
   line-height: normal;
   text-transform: uppercase;
   background-color: transparent;
   gap: 14px;
   display: flex;
-  cursor: pointer;
   position: relative;
 }
 
 .theme-menu__item .theme-menu__button:hover {
   opacity: 0.6;
-  transition: width 300ms, background-color 0.5s;
+  transition: width 300ms;
 }
 
 .theme-menu__item .theme-menu__button:disabled::before {
@@ -85,7 +86,6 @@
   left: -15px;
   animation: 0.3s linear 0s infinite alternate check;
   pointer-events: none;
-
 }
 
 @keyframes check {
@@ -137,10 +137,10 @@
 .card__image-text {
   position: absolute;
   z-index: 2;
-  opacity: 0.6;
+  opacity: 0.5;
   color: var(--accent-color);
   font-family: var(--accent-font), sans-serif;
-  font-weight: 400;
+  font-weight: var(--main-font-weight);
   font-size: 14px;
   text-shadow:
     1px 0 0 var(--background-color),
@@ -218,50 +218,10 @@
 }
 
 .like-icon {
-  position: absolute;
-
-  .core {
-    fill: var(--core-color-transparent);
-    transition: fill 0.3s 0.03s linear;
-  }
-
-  .main-body {
-    fill: var(--main-body-color-transparent);
-    transition: fill 0.3s linear;
-  }
-
-  .contour {
-    fill: var(--contour-clr);
-  }
-
-  .sparks {
-    fill: var(--sparks-fill-color-transparent);
-  }
+  display: flex;
+  justify-content: right;
 }
 
-.like-icon.is-liked {
-  animation: icon-scaling 0.3s 0.1s ease-in reverse;
-
-  .core {
-    animation: core-coloring 0.3s linear;
-    animation-fill-mode: forwards;
-  }
-
-  .main-body {
-    animation: main-body-coloring 0.3s 0.05s linear;
-    animation-fill-mode: forwards;
-  }
-
-  .contour {
-    animation: contour-coloring 0.3s 0.06s linear;
-    animation-fill-mode: forwards;
-  }
-
-  .sparks {
-    animation: sparks-coloring 0.3s 0.3s ease-in reverse;
-  }
-}
-  
 .card__icon-button:focus {
   outline: none;
 }
@@ -270,37 +230,9 @@
   outline: var(--border-width) solid var(--accent-color);
 }
 
-.card__icon-button:hover {
-  .like-icon {
-    .core {
-      fill: var(--core-color);
-      transition: fill 0.3s linear;
-    }
-
-    .main-body {
-      fill: var(--main-body-color);
-      transition: fill 0.3s 0.05s linear;
-    }
-  }
-}
-
-.card__icon-button:active {
-  .like-icon {
-    .core {
-      fill: var(--core-active-color);
-      transition: fill 0.3s linear;
-    }
-
-    .main-body {
-      fill: var(--main-body-active-color);
-      transition: fill 0.3s 0.05s linear;
-    }
-  }
-}
-
 .card__like-button {
   padding: 10px 0;
-  font-weight: 400;
+  font-weight: var(--main-font-weight);
   font-size: 14px;
   line-height: 90%;
   background-color: transparent;
@@ -344,7 +276,7 @@
   display: block;
   color: var(--button-text-color);
   font-family: var(--accent-font), sans-serif;
-  font-weight: 400;
+  font-weight: var(--main-font-weight);
   font-size: 14px;
   line-height: 90%;
   mix-blend-mode: difference;
@@ -390,7 +322,7 @@
   padding: 32px 42px;
   color: var(--accent-coolr);
   font-family: var(--accent-font), sans-serif;
-  font-weight: 400;
+  font-weight: var(--main-font-);
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
@@ -417,6 +349,7 @@
   padding: 9px 0;
   text-transform: uppercase;
   background-color: var(--background-color);
+  cursor: pointer;
 }
 
 .dialog__image {

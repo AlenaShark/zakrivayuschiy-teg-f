@@ -51,7 +51,7 @@
     }
   
     .contour {
-      fill: var(--contour-clr);
+      fill: var(--contour-color);
     }
   
     .sparks {

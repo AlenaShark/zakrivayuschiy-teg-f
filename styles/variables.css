@@ -25,36 +25,15 @@
   --core-active-color: #f00;
   --main-body-active-color: #f00;
 
-  /*gradient colors */
-  --gradient-line-1: rgb(211 211 211);
-  --gradient-line-2: rgb(211 211 211 / 0%);
-  --gradient-smeared-1: #e7e7e7;
-  --gradient-smeared-2: #1a1a1a;
-
-  /*gradient light*/
-  --gradient-left-to-right: repeating-linear-gradient(to right,
-    var(--gradient-line-2) 0,
-    var(--gradient-line-1) 1px,
-    var(--gradient-line-1) 2px,
-    var(--gradient-line-2) 3px,
-    var(--gradient-line-2) 4px
-    );
-  --gradient-top-to-bottom: repeating-linear-gradient(to bottom,
-    var(--gradient-line-2) 0,
-    var(--gradient-line-1) 1px,
-    var(--gradient-line-1) 2px,
-    var(--gradient-line-2) 3px,
-    var(--gradient-line-2) 4px
-    );
-  --gradient-background: linear-gradient(to bottom,
-    var(--gradient-smeared-1) 0.01%,
-    var(--gradient-smeared-2)
-  );
+  /*gradient*/
+  --background-gradient-color: rgb(211 211 211);
+  --background-color-from: #e7e7e7;
+  --background-color-to: #1a1a1a;
 
   /* transforms */
   --transform-time: 0.3s;
   --transition-function: ease;
 
   /* border */
-  --border-widht: 2px;
+  --border-width: 2px;
 }
